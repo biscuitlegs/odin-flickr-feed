@@ -1,0 +1,5 @@
+<%= form_with url: root_path, method: "get", local: true do |f| %>
+    <%= f.label :username, "Flickr Username:" %>
+    <%= f.text_field :username %>
+    <%= f.submit "Search" %>
+<% end %>

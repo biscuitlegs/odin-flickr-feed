@@ -1,0 +1,6 @@
+<h1>Photos by <%= params[:username] %></h1>
+
+<% @photos.each do |photo| %>
+    <h2> <%=photo[:title]%> </h2>
+    <img src="<%= photo[:url] %>" alt="">
+<% end %>
