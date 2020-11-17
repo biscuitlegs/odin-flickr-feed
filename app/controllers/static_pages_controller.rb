@@ -22,7 +22,7 @@ class StaticPagesController < ApplicationController
     private
 
     def url_from_photo(photo)
-        "https://live.staticflickr.com/#{photo.server}/#{photo.id}_#{photo.secret}_c.jpg"
+        "https://live.staticflickr.com/#{photo.server}/#{photo.id}_#{photo.secret}_q.jpg"
     end
 
     def photos_from_list(list, photos=[])

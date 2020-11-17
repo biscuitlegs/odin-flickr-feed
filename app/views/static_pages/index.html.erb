@@ -1,2 +1,22 @@
-<h1>Find Photos</h1>
-<%= render "form" %>
+<div class="hero is-primary">
+    <div class="hero-body">
+        <div class="container">
+            <h1 class="title has-text-centered">Flickr Photo Feed</h1>
+        </div>
+    </div>
+</div>
+
+<% if flash[:error] %>
+      <div class="notification is-danger">
+        <%= flash[:error] %>
+      </div>
+    <% end %>
+
+<section>
+    <div class="container px-6 mt-6">
+        <div class="box">
+            <h1 class="subtitle">Find a user's photos</h1>
+            <%= render "form" %>
+        </div>
+    </div>
+</section>

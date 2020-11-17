@@ -1,6 +1,19 @@
-<h1>Photos by <%= params[:username] %></h1>
+<div class="hero is-primary">
+    <div class="hero-body">
+        <h1 class="title has-text-centered">Photos by <%= params[:username] %></h1>
+    </div>
+</div>
 
-<% @photos.each do |photo| %>
-    <h2> <%=photo[:title]%> </h2>
-    <img src="<%= photo[:url] %>" alt="">
-<% end %>
+<div class="container mt-4">
+    <a href="<%= root_path %>" class="button">Back</a>
+</div>
+
+<div class="container">
+    <div class="columns box mt-6">
+        <div class="column">
+            <% @photos.each do |photo| %>
+                <img src="<%= photo[:url] %>" alt="">
+            <% end %>
+        </div>
+    </div>
+</div>
